@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import pl.com.watroba.OtoRejs.dao.CruisesDAO;
+import pl.com.watroba.OtoRejs.repository.CruisesRepository;
 import pl.com.watroba.OtoRejs.models.Cruise;
 
 @RestController
 public class AdController {
     @Autowired
-	private CruisesDAO field;
+	private CruisesRepository field;
 	@GetMapping("/")
 	public String home () {return "Hello from the other side !";}
 	@GetMapping("/cruises")

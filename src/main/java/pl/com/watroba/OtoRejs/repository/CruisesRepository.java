@@ -1,4 +1,4 @@
-package pl.com.watroba.OtoRejs.dao;
+package pl.com.watroba.OtoRejs.repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 import pl.com.watroba.OtoRejs.models.Cruise;
 @Scope(value="singleton")
 @Component
-public class CruisesDAO {
+public class CruisesRepository {
 	final List<Cruise> cruises = new ArrayList<>();
 
-	public CruisesDAO()
+	public CruisesRepository()
 	{ 
 		cruises.add(0,  new Cruise(1,"qrt","sqrt",2340));
 		cruises.add(1,  new Cruise(1,"wrt","pow",2340));
